@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "yaper/base.html" %}
+
+{% block content %}
+  {% for post in posts %}
+    {% include "yaper/_post_card.html" %}
+  {% empty %}
+    <p class="muted">No posts yet.</p>
+  {% endfor %}
+{% endblock %}
+</body>
+</html>
